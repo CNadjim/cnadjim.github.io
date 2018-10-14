@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+    - node_modules
+script:
+  - npm test
+  - npm run build
+notifications:
+  email: false
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: build
+  github_token: $github_token
+  on:
+    branch: source
+  repo: CNadjim/cnadjim.github.io
+  target_branch: master
