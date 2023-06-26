@@ -3,18 +3,15 @@
 @import "@fontsource/montserrat/500.css";
 
 .home {
-  width: 100%;
-  min-height: 100%;
-  clear: both;
+  flex: 1 1;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
 }
 
 .home .home_content {
+  flex: none;
   display: flex;
   align-items: center;
+  margin: auto;
 }
 
 .home .avatar {
@@ -61,12 +58,10 @@
   font-size: 55px;
   font-weight: 800;
   text-transform: uppercase;
-  margin-bottom: 14px;
 }
 
 .home .details .job {
   font-weight: 600;
-  max-width: 450px;
   margin-bottom: 20px;
 }
 
@@ -76,7 +71,7 @@
 }
 
 .social {
-  margin: 0;
+  justify-content: flex-start;
   list-style-type: none;
 }
 
@@ -165,15 +160,21 @@
 
 
 @media (max-width: 1200px) {
+  .home {
+    flex-direction: column;
+  }
   .home .home_content {
     flex-direction: column;
     text-align: center;
   }
   .home .avatar {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
   .home .details {
     margin-left: 0;
+  }
+  .social{
+    justify-content: center;
   }
 }
 

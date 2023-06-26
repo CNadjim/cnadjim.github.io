@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {AppBar, IconButton, Toolbar, Typography} from "@mui/material";
+import {AppBar, Divider, IconButton, Toolbar, Typography} from "@mui/material";
 
 import MenuIcon from '@mui/icons-material/Menu';
 import {useDispatch} from "react-redux";
@@ -11,6 +11,9 @@ const Header = () => {
     return (
         <>
             <AppBar position="relative"
+                    color="transparent"
+                    enableColorOnDark={true}
+                    elevation={0}
                     sx={{
                         display: {
                             md: 'block',
@@ -18,6 +21,8 @@ const Header = () => {
                         }
                     }}>
                 <Toolbar>
+                    <Typography variant="h6" component="div" sx={{flexGrow: 1}}>
+                    </Typography>
                     <IconButton
                         onClick={() => dispatch(drawerMobileOpened())}
                         size="large"
@@ -25,14 +30,13 @@ const Header = () => {
                         color="inherit"
                         aria-label="menu"
                         sx={{
-                            mr: 2
+                            ml: 1
                         }}>
                         <MenuIcon/>
                     </IconButton>
-                    <Typography variant="h6" component="div" sx={{flexGrow: 1}}>
-                    </Typography>
                 </Toolbar>
             </AppBar>
+            <Divider/>
         </>
     );
 };

@@ -59,6 +59,7 @@ const NavigationDrawer = () => {
     return (
         <>
             <Drawer
+                anchor="right"
                 variant="temporary"
                 open={mobileDrawerOpen}
                 onClose={() => dispatch(drawerMobileClosed())}
