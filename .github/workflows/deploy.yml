@@ -1,0 +1,25 @@
+name: Application
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build_test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.15] # We will deploy with only one version of node
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: npm ci, build and test
+        run: |
+          npm run build
+      - name: deploy to pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_branch: production
+          publish_dir: ./build
