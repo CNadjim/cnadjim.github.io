@@ -15,14 +15,14 @@ const Home = () => {
                     </div>
                     <div className="details flex-col flex">
 
-                        <h3 className="name mb-8">
+                        <h3 className="name">
                             <Fade cascade delay={0} damping={0.1} triggerOnce={true}>
                                 Chabane Nadjim
                             </Fade>
                         </h3>
 
                         <Fade direction="up" delay={300} triggerOnce={true}>
-                            <div className="job mt-2 mb-2 text-gray-700 font-montserrat font-medium antialiased">
+                            <div className="job mt-3 mb-3 text-gray-700 font-montserrat font-medium antialiased">
                                 <p className="m-0">
                                     Hi, welcome to my site 👋🏻 <br/>
                                     I'm a freelance software engineer <br/>
