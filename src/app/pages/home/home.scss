@@ -1,0 +1,378 @@
+@import "@fontsource/mulish/500.css";
+@import "@fontsource/mulish/800.css";
+@import "@fontsource/montserrat/500.css";
+
+.home {
+  width: 100%;
+  min-height: 100%;
+  clear: both;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.home .home_content {
+  display: flex;
+  align-items: center;
+}
+
+.home .avatar {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  border-radius: 100%;
+}
+
+.home .avatar .image {
+  background-image: url("../../../assets/nadjim.jpeg");
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  animation: morph 8s ease-in-out infinite 1s;
+  background-blend-mode: multiply;
+  box-shadow: inset 0 0 0 9px rgba(255, 255, 255, 0.3);
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  overflow: hidden;
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+.home .details {
+  margin-left: 60px;
+}
+
+.home .details .name {
+  font-size: 55px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.home .details .job {
+  font-weight: 600;
+  max-width: 450px;
+  margin-bottom: 20px;
+}
+
+.home .social {
+  width: 100%;
+  float: left;
+}
+
+.social {
+  margin: 0;
+  list-style-type: none;
+}
+
+.social li {
+  margin: 0 15px 0 0;
+  display: inline-flex;
+}
+
+.social li:last-child {
+  margin-right: 0;
+}
+.social svg {
+  z-index: 2;
+}
+
+.effect {
+  a {
+    text-decoration: none !important;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 20px;
+    font-size: 26px;
+    overflow: hidden;
+    position: relative;
+    color: rgb(55 65 81); //or change to your own color
+    border: 2px solid rgb(55 65 81); //or change to your own color
+
+    i {
+      position: relative;
+      z-index: 3;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+
+    i {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+
+.effect.varrius {
+
+  a {
+    transition: all 0.2s linear 0s;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 90%;
+      height: 90%;
+      top: -110%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      position: absolute;
+      background-color: rgb(55 65 81);
+      border-radius: 50%;
+    }
+
+    &:hover {
+      z-index: 2;
+      color: #fff;
+
+      &:after {
+        top: 5%;
+        transition: all 0.2s linear 0s;
+      }
+    }
+  }
+
+}
+
+
+@media (max-width: 1200px) {
+  .home .home_content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .home .avatar {
+    margin-bottom: 30px;
+  }
+  .home .details {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1600px) {
+  .home .avatar {
+    width: 300px;
+    height: 300px;
+  }
+  .home .details .name {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home .details .name {
+    font-size: 30px;
+  }
+  .home .avatar {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .home .avatar {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+
+// wave
+.waves-container{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.wave {
+  background: rgba(25, 118, 210, 0.1);
+  border-radius: 1000% 1000% 0 0;
+  position: absolute;
+  width: 200%;
+  height: 20%;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -2%;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -3%;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 0.9;
+}
+
+@keyframes wave {
+  2% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-25%);
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+  75% {
+    transform: translateX(-25%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+// clouds
+
+@keyframes moveclouds {
+  0% {margin-left: 1000px;}
+  100% {margin-left: -1000px;}
+}
+.clouds-container{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 30%;
+  overflow: hidden;
+}
+
+#clouds{
+  padding: 100px 0;
+  background: linear-gradient(to bottom, rgba(25, 118, 210, 0.6) 0%,rgba(25, 118, 210, 0.3) 20%,rgba(25, 118, 210, 0.09) 50%,rgba(25, 118, 210, 0.0) 60%);
+}
+
+/*Time to finalise the cloud shape*/
+.cloud {
+  width: 200px; height: 60px;
+  background: #fff;
+
+  border-radius: 200px;
+  -moz-border-radius: 200px;
+  -webkit-border-radius: 200px;
+
+  position: relative;
+}
+
+.cloud:before, .cloud:after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  width: 100px; height: 80px;
+  position: absolute; top: -15px; left: 10px;
+
+  border-radius: 100px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+}
+
+.cloud:after {
+  width: 120px; height: 120px;
+  top: -55px; left: auto; right: 15px;
+}
+
+/*Time to animate*/
+.x1 {
+  -webkit-animation: moveclouds 15s linear infinite;
+  -moz-animation: moveclouds 15s linear infinite;
+  -o-animation: moveclouds 15s linear infinite;
+}
+
+/*variable speed, opacity, and position of clouds for realistic effect*/
+.x2 {
+  left: 200px;
+
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  transform: scale(0.6);
+  opacity: 0.6; /*opacity proportional to the size*/
+
+  /*Speed will also be proportional to the size and opacity*/
+  /*More the speed. Less the time in 's' = seconds*/
+  -webkit-animation: moveclouds 25s linear infinite;
+  -moz-animation: moveclouds 25s linear infinite;
+  -o-animation: moveclouds 25s linear infinite;
+}
+
+.x3 {
+  left: -250px; top: -200px;
+
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 0.8; /*opacity proportional to the size*/
+
+  -webkit-animation: moveclouds 20s linear infinite;
+  -moz-animation: moveclouds 20s linear infinite;
+  -o-animation: moveclouds 20s linear infinite;
+}
+
+.x4 {
+  left: 470px; top: -250px;
+
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  transform: scale(0.75);
+  opacity: 0.75; /*opacity proportional to the size*/
+
+  -webkit-animation: moveclouds 18s linear infinite;
+  -moz-animation: moveclouds 18s linear infinite;
+  -o-animation: moveclouds 18s linear infinite;
+}
+
+.x5 {
+  left: -150px; top: -150px;
+
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 0.8; /*opacity proportional to the size*/
+
+  -webkit-animation: moveclouds 20s linear infinite;
+  -moz-animation: moveclouds 20s linear infinite;
+  -o-animation: moveclouds 20s linear infinite;
+}
