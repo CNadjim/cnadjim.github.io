@@ -1,6 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit";
 
-export const navigationDrawerSlice = createSlice({
+export const navigationDrawer = createSlice({
     name: 'navigationDrawer',
     initialState: {
         desktopOpen: true,
@@ -27,8 +27,8 @@ export const {
     drawerDesktopClosed,
     drawerMobileOpened,
     drawerMobileClosed
-} = navigationDrawerSlice.actions;
+} = navigationDrawer.actions;
 
 export const selectDesktopNavigationDrawer = (state) => state.navigationDrawer.desktopOpen;
 export const selectMobileNavigationDrawer = (state) => state.navigationDrawer.mobileOpen;
-export default navigationDrawerSlice.reducer
+export default navigationDrawer.reducer

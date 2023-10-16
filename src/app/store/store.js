@@ -1,8 +1,10 @@
 import {configureStore} from "@reduxjs/toolkit";
-import navigationDrawerReducer from "../components/drawer/navigation-drawer.slice";
 
+import navigationDrawerReducer from "../reducers/navigation-drawer";
+import themeReducer from "../reducers/theme";
 export default configureStore({
     reducer: {
         navigationDrawer: navigationDrawerReducer,
+        theme: themeReducer
     },
 });

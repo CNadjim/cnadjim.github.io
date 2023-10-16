@@ -1,8 +1,9 @@
-import DefaultLayout from "./layouts/default-layout";
+import SidebarLayout from "./layouts/sidebar/sidebarLayout";
+
 const App = () => {
     return (
         <>
-            <DefaultLayout/>
+            <SidebarLayout/>
         </>
     );
 }

@@ -1,42 +1,21 @@
 import * as React from 'react';
-import {AppBar, Divider, IconButton, Toolbar, Typography} from "@mui/material";
-
-import MenuIcon from '@mui/icons-material/Menu';
 import {useDispatch} from "react-redux";
-import {drawerMobileOpened} from "../drawer/navigation-drawer.slice";
-
+import {Bars3Icon} from "@heroicons/react/24/outline";
+import {drawerMobileOpened} from "../../reducers/navigation-drawer";
+import './header.scss';
 const Header = () => {
     const dispatch = useDispatch();
-
     return (
         <>
-            <AppBar position="relative"
-                    color="transparent"
-                    enableColorOnDark={true}
-                    elevation={0}
-                    sx={{
-                        display: {
-                            md: 'block',
-                            lg: 'none'
-                        }
-                    }}>
-                <Toolbar>
-                    <Typography variant="h6" component="div" sx={{flexGrow: 1}}>
-                    </Typography>
-                    <IconButton
-                        onClick={() => dispatch(drawerMobileOpened())}
-                        size="large"
-                        edge="start"
-                        color="inherit"
-                        aria-label="menu"
-                        sx={{
-                            ml: 1
-                        }}>
-                        <MenuIcon/>
-                    </IconButton>
-                </Toolbar>
-            </AppBar>
-            <Divider/>
+            <div className="header flex sticky z-20 bg-white border-b top-0 z-10 bg-gray-100 pl-5 lg:hidden">
+                <button
+                    type="button"
+                    className="-ml-0.5 -mt-0.5 inline-flex h-12 w-12 items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                    onClick={() => dispatch(drawerMobileOpened())}>
+                    <span className="sr-only">Open sidebar</span>
+                    <Bars3Icon className="h-6 w-6" aria-hidden="true"/>
+                </button>
+            </div>
         </>
     );
 };

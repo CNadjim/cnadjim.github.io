@@ -1,35 +1,39 @@
-@import "@fontsource/roboto";
-@import "@fontsource/montserrat";
-@import "@fontsource/mulish";
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-size: 14px;
-  line-height: 1.4;
-  overflow-x: hidden;
-  font-feature-settings: "salt";
-  background: rgb(248 248 248);
-}
-
-html, body, #root {
-  display: flex;
-  flex: 1 1;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+html {
+  @apply h-full;
+  @apply bg-gray-100;
+  @apply antialiased
 }
 
 body {
-  font-family: Mulish, sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 30px;
+  @apply h-full;
+  @apply flex;
+  @apply flex-col;
+  background-color: rgb(250 250 250);
 }
 
-.font-montserrat {
-  font-family: Montserrat, sans-serif;
+
+#root {
+  @apply flex;
+  @apply flex-1;
+  @apply overflow-hidden;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  font-display: block;
+  font-style: normal;
+  src: url('../assets/font/Inter-roman.var.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  font-display: block;
+  font-style: italic;
+  src: url('../assets/font/Inter-italic.var.woff2') format('woff2');
 }
