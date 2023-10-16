@@ -96,7 +96,11 @@
 /*smartphones mobiles (portrait)*/
 @media (min-width: 320px) and (max-width: 480px) {
   .avatar {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .image {
+    border-width: 2px;
   }
 }

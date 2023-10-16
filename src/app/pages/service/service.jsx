@@ -198,10 +198,10 @@ const ServicePage = () => {
         mask="[mask-image:radial-gradient(circle_at_center,white_60%,transparent_100%)]"/>;
 
     return (
-        <div className="flex flex-1 flex-col overflow-auto relative">
+        <div className="flex flex-1 flex-col overflow-hidden relative">
             <div className="absolute custom-border self-center bg-white h-full w-full container">
             </div>
-            <div className="flex flex-1 flex-col z-10 overflow-y-auto items-center">
+            <div className="flex flex-1 flex-col z-10 overflow-x-hidden overflow-y-auto items-center">
 
                 <Intro></Intro>
 
