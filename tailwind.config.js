@@ -17,6 +17,10 @@ module.exports = {
             },
         },
         extend: {
+            backgroundImage: {
+                beams: "url('/src/assets/image/beams.jpeg')",
+                grid: "url('/src/assets/svg/grid.svg')"
+            },
             fontFamily: {
                 sans: ['Inter', ...defaultTheme.fontFamily.sans],
             },

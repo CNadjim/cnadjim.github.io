@@ -3,27 +3,30 @@ import React from "react";
 import waving from '../../../assets/image/waving.png';
 import SquareBackgroundTech from "../../components/square-background-tech/square-background";
 import {Fade, Slide, Zoom} from "react-awesome-reveal";
+import DevSvgCard from "../../components/dev-svg-card/dev-svg-card";
 
 export const Presentation = () => {
     return (
         <>
             <div className="flex flex-none flex-col gap-3 presentation xl:flex-auto">
-                <Slide delay={0} triggerOnce={true}>
-                    <h1 className="flex flex-none flex-row gap-4 items-center text-4xl font-bold tracking-tight text-hero-color sm:text-6xl">
+                <Slide triggerOnce={true}>
+                    <h1 className="flex flex-none flex-row gap-4 justify-center items-center text-4xl font-bold tracking-tight text-hero-color sm:text-6xl xl:justify-start">
                         <span>Full-Stack Developer</span>
-                        <Zoom delay={800}>
+                        <Zoom delay={600}>
                             <img className="waving" src={waving} alt="coucou"/>
                         </Zoom>
                     </h1>
                 </Slide>
-                <Fade direction="up" delay={800} triggerOnce={true}>
-                    <p className="text-xl leading-8 text-text-color antialiased">
+                <Fade direction="up" delay={600} triggerOnce={true}>
+                    <p className="text-xl leading-8 text-text-color antialiased text-center xl:text-start">
                         Hi, I'm Chabane Nadjim. <br/>
                         A software engineer specialized in both, back-end and front-end development based in Paris,
                         France. 📍
                     </p>
 
-                    <div className="mt-3 flex-none flex flex-row gap-4 social">
+                </Fade>
+                <Fade direction="up" delay={1000} triggerOnce={true}>
+                    <div className="mt-3 flex-none flex flex-row justify-center gap-4 social xl:justify-start">
                         <a aria-label="linkedin" rel="noreferrer" target="_blank"
                            href="https://www.linkedin.com/in/nadjim-chabane-79788112b">
 
@@ -51,6 +54,7 @@ export const Presentation = () => {
                         </a>
                     </div>
                 </Fade>
+
             </div>
         </>
     )

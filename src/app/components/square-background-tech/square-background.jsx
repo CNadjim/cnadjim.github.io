@@ -1,7 +1,6 @@
 import React, {useLayoutEffect, useRef, useState} from "react";
-import DevCard from "../dev-card/dev-card";
+import DevFontCard from "../dev-font-card/dev-font-card";
 import './square-background.scss';
-import {Fade} from "react-awesome-reveal";
 
 const SquareBackgroundTech = (props) => {
     const [width, setWidth] = useState(0);
@@ -37,7 +36,7 @@ const SquareBackgroundTech = (props) => {
                                 {[...Array(rows)].map((row, rowKey) => {
                                     return (
                                         <td key={rowKey + 'td'}>
-                                            <DevCard/>
+                                            <DevFontCard/>
                                         </td>
                                     )
                                 })}

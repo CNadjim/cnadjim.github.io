@@ -1,0 +1,51 @@
+@import "devicon/devicon.min.css";
+
+.dev-card {
+  --size-card: 150px;
+  width: var(--size-card);
+  height: var(--size-card);
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.dev-card i {
+  font-size: calc(var(--size-card) * 0.6);;
+}
+
+/*desktops - higher resolution*/
+@media (min-width: 1281px) {
+
+}
+
+/*laptops, desktops*/
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+
+/*tablets, ipads (portrait)*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .dev-card {
+    --size-card: 140px;
+  }
+}
+
+/*tablets, ipads (landscape)*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .dev-card {
+    --size-card: 120px;
+  }
+}
+
+/*low resolution tablets, mobiles (landscape)*/
+@media (min-width: 481px) and (max-width: 767px) {
+  .dev-card {
+    --size-card: 100px;
+  }
+}
+
+/*smartphones mobiles (portrait)*/
+@media (min-width: 320px) and (max-width: 480px) {
+  .dev-card {
+    --size-card: 80px;
+  }
+}
