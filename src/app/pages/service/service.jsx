@@ -2,8 +2,10 @@ import React from "react";
 import {Link} from "react-router-dom";
 import './service.scss';
 import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import {Swiper, SwiperSlide} from "swiper/react";
-import {Autoplay} from "swiper/modules";
+import {Mousewheel, Navigation, Pagination} from "swiper/modules";
 import SquareBackgroundTech from "../../components/square-background-tech/square-background";
 import DevSvgCard from "../../components/dev-svg-card/dev-svg-card";
 
@@ -187,10 +189,17 @@ const TechnoSwiper = ({children}) => {
                 <div
                     className="absolute inset-0 bg-grid bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
                 <Swiper
-                    className="sample-slider"
+                    className="custom-slider"
+                    navigation={true}
                     slidesPerView={'auto'}
-                    spaceBetween={'10px'}
-                    modules={[Autoplay]}>
+                    grabCursor={true}
+                    spaceBetween={'50px'}
+                    pagination={{
+                        clickable: true,
+                    }}
+
+                    mousewheel={true}
+                    modules={[Mousewheel, Navigation, Pagination]}>
                     {children}
                 </Swiper>
             </div>
@@ -213,10 +222,10 @@ const ServicePage = () => {
 
                 <TechnoSwiper>
                     <SwiperSlide>
-                        <DevSvgCard name="javascript"/>
+                        <DevSvgCard name="javascript" fileName="javascript-original"/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <DevSvgCard name="typescript"/>
+                        <DevSvgCard name="typescript" fileName="typescript-original"/>
                     </SwiperSlide>
                     <SwiperSlide>
                         <DevSvgCard name="nodejs" fileName="nodejs-original-wordmark" backgroundColor={"white"}/>
@@ -228,7 +237,7 @@ const ServicePage = () => {
                         <DevSvgCard name="react" fileName="react-original-wordmark" fillWhite={true}/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <DevSvgCard name="angularjs" fileName="angularjs-plain" fillWhite={true}/>
+                        <DevSvgCard name="angularjs" tooltip="angular" fileName="angularjs-plain" fillWhite={true}/>
                     </SwiperSlide>
                     <SwiperSlide>
                         <DevSvgCard name="redux" fillWhite={true}/>
@@ -249,7 +258,7 @@ const ServicePage = () => {
                         <DevSvgCard name="sass" fillWhite={true}/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <DevSvgCard name="magento"  fileName="magento-original-wordmark" fillWhite={true}/>
+                        <DevSvgCard name="magento" fileName="magento-original-wordmark" fillWhite={true}/>
                     </SwiperSlide>
                 </TechnoSwiper>
 
@@ -258,13 +267,10 @@ const ServicePage = () => {
 
                 <TechnoSwiper>
                     <SwiperSlide>
-                        <DevSvgCard/>
+                        <DevSvgCard name="java" fileName="java-original-wordmark" backgroundColor="white"/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <DevSvgCard/>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <DevSvgCard/>
+                        <DevSvgCard name="javascript" fileName="javascript-original"/>
                     </SwiperSlide>
                     <SwiperSlide>
                         <DevSvgCard/>

@@ -1,12 +1,7 @@
 import React from "react";
 import './dev-font-card.scss';
 import {Zoom} from "react-awesome-reveal";
-
-export function getRandomArbitrary(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min);
-}
+import {getFileName, getIconByName} from "../../utils/devicon";
 
 export const techno = [
     "devicon-spring-plain-wordmark",
@@ -69,13 +64,14 @@ export const techno = [
     "devicon-ssh-original-wordmark",
     "devicon-xcode-plain"
 ]
-export default function DevFontCard() {
-    let randomNumber = getRandomArbitrary(0, techno.length);
+export default function DevFontCard({name}) {
+    let icon = getIconByName(name);
+    let fileName = getFileName(icon, "font");
     return (
         <>
             <div className="flex justify-center items-center h-full w-full dev-card">
                 <Zoom>
-                    <i className={`${techno[randomNumber]} text-text-color opacity-30`}></i>
+                    <i className={`${fileName} text-text-color opacity-30`}></i>
                 </Zoom>
             </div>
         </>
