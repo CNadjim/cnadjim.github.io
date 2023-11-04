@@ -24,14 +24,14 @@ const DevSvgCard = ({name, fileName, tooltip, backgroundColor, fillWhite}) => {
     if (SvgIcon) {
         return (
             <>
-                <div className="my-card flex flex-col p-4 overflow-hidden gap-4">
+                <div className="my-card flex flex-col p-4 overflow-hidden">
                     <div
                         className="flex flex-1 border-4 shadow-md border-white rounded-full svg-avatar overflow-hidden"
                         style={{backgroundColor: `${backgroundColor}`}}>
                         <SvgIcon className={fillWhite ? "svg-fill-white" : ''}/>
                     </div>
                     <div
-                        className="flex-none px-4 py-1 text-hero-color text-center bg-white rounded-full capitalize shadow-md text-sm">
+                        className="flex-none px-4 py-1 mt-3 text-hero-color text-center bg-white rounded-full capitalize shadow-md text-sm">
                         {tooltip ? tooltip : icon.name}
                     </div>
                 </div>
