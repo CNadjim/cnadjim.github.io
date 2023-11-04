@@ -127,7 +127,7 @@ const DevOps = () => {
         <>
             <SectionContainer>
                 <h2>
-                    What about dev-ops, design, UI, project leadership, team mentorship ?
+                    What about dev-ops, mobile, design, UI, project leadership, team mentorship ?
                 </h2>
 
                 <p>
@@ -191,14 +191,12 @@ const TechnoSwiper = ({children}) => {
                 <Swiper
                     className="custom-slider"
                     navigation={true}
-                    slidesPerView={'auto'}
                     grabCursor={true}
-                    spaceBetween={'50px'}
                     pagination={{
                         clickable: true,
                     }}
-
                     mousewheel={true}
+                    slidesPerView={"auto"}
                     modules={[Mousewheel, Navigation, Pagination]}>
                     {children}
                 </Swiper>
@@ -251,15 +249,6 @@ const ServicePage = () => {
                     <SwiperSlide>
                         <DevSvgCard name="tailwindcss" fileName="tailwindcss-plain" fillWhite={true}/>
                     </SwiperSlide>
-                    <SwiperSlide>
-                        <DevSvgCard name="bootstrap" fileName="bootstrap-plain" fillWhite={true}/>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <DevSvgCard name="sass" fillWhite={true}/>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <DevSvgCard name="magento" fileName="magento-original-wordmark" fillWhite={true}/>
-                    </SwiperSlide>
                 </TechnoSwiper>
 
 
@@ -273,13 +262,19 @@ const ServicePage = () => {
                         <DevSvgCard name="javascript" fileName="javascript-original"/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <DevSvgCard/>
+                        <DevSvgCard name="spring" fileName="spring-plain-wordmark" fillWhite={true}/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <DevSvgCard/>
+                        <DevSvgCard name="express" tooltip="express js" fileName="express-original-wordmark" backgroundColor="white"/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <DevSvgCard/>
+                        <DevSvgCard name="mongodb" fileName="mongodb-plain-wordmark" fillWhite={true}/>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <DevSvgCard name="mysql" fileName="mysql-plain-wordmark" fillWhite={true}/>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <DevSvgCard name="apachekafka" fileName="apachekafka-original-wordmark" fillWhite={true}/>
                     </SwiperSlide>
                 </TechnoSwiper>
 
@@ -288,22 +283,19 @@ const ServicePage = () => {
 
                 <TechnoSwiper>
                     <SwiperSlide>
-                        <DevSvgCard/>
+                        <DevSvgCard name="docker" fileName="docker-original-wordmark" backgroundColor="white"/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <DevSvgCard/>
+                        <DevSvgCard name="kubernetes" fileName="kubernetes-plain-wordmark" backgroundColor="white"/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <DevSvgCard/>
+                        <DevSvgCard name="github" fileName="github-original-wordmark" backgroundColor="white"/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <DevSvgCard/>
+                        <DevSvgCard name="jenkins" fileName="jenkins-original" backgroundColor="white"/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <DevSvgCard/>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <DevSvgCard/>
+                        <DevSvgCard name="flutter" fileName="flutter-original" backgroundColor="white"/>
                     </SwiperSlide>
                 </TechnoSwiper>
             </div>

@@ -3,7 +3,6 @@ import React from "react";
 import waving from '../../../assets/image/waving.png';
 import SquareBackgroundTech from "../../components/square-background-tech/square-background";
 import {Fade, Slide, Zoom} from "react-awesome-reveal";
-import DevSvgCard from "../../components/dev-svg-card/dev-svg-card";
 
 export const Presentation = () => {
     return (
@@ -20,8 +19,8 @@ export const Presentation = () => {
                 <Fade direction="up" delay={600} triggerOnce={true}>
                     <p className="text-xl leading-8 text-text-color antialiased text-center xl:text-start">
                         Hi, I'm Chabane Nadjim. <br/>
-                        A software engineer specialized in both, back-end and front-end development based in Paris,
-                        France. 📍
+                        A software engineer specialized in back-end and front-end development. <br/>
+                        Based in Paris, France. 📍
                     </p>
 
                 </Fade>

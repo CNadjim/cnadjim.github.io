@@ -1,6 +1,7 @@
 .my-card {
-  width: 8rem;
-  margin: 0 10px;
+  --size-card: 200px;
+  width: var(--size-card);
+  height: var(--size-card);
 }
 
 .svg-fill-white {
@@ -15,18 +16,40 @@
   margin: auto;
 }
 
-@media (min-width: 640px) {
+/*desktops - higher resolution*/
+@media (min-width: 1281px) {
+
 }
 
-@media (min-width: 768px) {
+/*laptops, desktops*/
+@media (min-width: 1025px) and (max-width: 1280px) {
+
 }
 
-@media (min-width: 1024px) {
+/*tablets, ipads (portrait)*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .dev-card {
+    --size-card: 140px;
+  }
 }
 
-@media (min-width: 1280px) {
+/*tablets, ipads (landscape)*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .dev-card {
+    --size-card: 120px;
+  }
 }
 
-@media (min-width: 1536px) {
+/*low resolution tablets, mobiles (landscape)*/
+@media (min-width: 481px) and (max-width: 767px) {
+  .dev-card {
+    --size-card: 100px;
+  }
+}
 
+/*smartphones mobiles (portrait)*/
+@media (min-width: 320px) and (max-width: 480px) {
+  .dev-card {
+    --size-card: 80px;
+  }
 }
