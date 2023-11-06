@@ -6,7 +6,7 @@ import './sidebar.scss';
 export default function SidebarLayout() {
     return (
         <>
-            <div className="dark flex-1 flex flex-row overflow-hidden relative">
+            <div className="flex-1 flex flex-row overflow-hidden relative">
                 <NavigationDrawer/>
                 <div className="flex flex-1 flex-col overflow-hidden">
                     <Header/>
