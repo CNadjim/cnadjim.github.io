@@ -9,10 +9,10 @@ export const Presentation = () => {
         <>
             <div className="flex flex-none flex-col gap-3 presentation xl:flex-auto">
                 <Slide triggerOnce={true}>
-                    <h1 className="flex flex-none flex-row gap-4 justify-center items-center text-4xl font-bold tracking-tight text-hero-color sm:text-6xl xl:justify-start">
+                    <h1 className="flex flex-none flex-row gap-4 justify-center items-center text-3xl font-bold tracking-tight text-hero-color sm:text-5xl md:text-6xl xl:justify-start">
                         <span>Full-Stack Developer</span>
                         <Zoom delay={600}>
-                            <img className="waving" src={waving} alt="coucou"/>
+                            <img className="waving hidden sm:block" src={waving} alt="coucou"/>
                         </Zoom>
                     </h1>
                 </Slide>
@@ -25,7 +25,7 @@ export const Presentation = () => {
 
                 </Fade>
                 <Fade direction="up" delay={1000} triggerOnce={true}>
-                    <div className="mt-3 flex-none flex flex-row justify-center gap-4 social xl:justify-start">
+                    <div className="py-4 flex-none flex flex-row justify-center gap-4 social xl:justify-start">
                         <a aria-label="linkedin" rel="noreferrer" target="_blank"
                            href="https://www.linkedin.com/in/nadjim-chabane-79788112b">
 
@@ -64,7 +64,7 @@ export default function HomePage() {
             <div className="flex flex-1 flex-col overflow-auto relative">
                 <SquareBackgroundTech/>
                 <div
-                    className="z-10 flex flex-1 self-center items-center justify-center flex-col-reverse gap-12 container xl:flex-row xl:flex-1">
+                    className="z-10 flex flex-1 pt-3 items-center justify-end self-center flex-col-reverse gap-12 container md:pt-0 md:self-center md:items-center md:justify-center xl:flex-row xl:flex-1">
                     <Presentation></Presentation>
 
                     <Zoom triggerOnce={true}>

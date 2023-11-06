@@ -190,7 +190,7 @@ const TechnoSwiper = ({children}) => {
                     className="absolute inset-0 bg-grid bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
                 <Swiper
                     className="custom-slider"
-                    initialSlide={1}
+                    initialSlide={0}
                     navigation={true}
                     grabCursor={true}
                     pagination={{
