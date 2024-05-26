@@ -15,7 +15,7 @@ const Intro = () => {
             <SectionContainer>
                 <h2>What can i offer you</h2>
                 <p>
-                    <strong>A full-stack software engineer with over 7 years of experience.</strong>
+                    <strong>A full-stack software engineer with over 8 years of experience.</strong>
                 </p>
                 <p>
                     <strong>I have maintained, developed and launched <Link to="/portfolio">multiple
@@ -51,9 +51,8 @@ const FrontEnd = () => {
                     <li>Good sense of design and UX</li>
                     <li>
                         Huge experience in almost all of the JS ecosystems, by having used in the
-                        past many libraries like Next.js, React, Redux, Redux-Observable, RxJS,
-                        Angular, Ionic Framework, and many
-                        else.
+                        past many libraries like React, Redux, Redux-Observable, RxJS,
+                        Angular, Ionic Framework, and many else.
                     </li>
                 </ul>
             </SectionContainer>
@@ -70,29 +69,14 @@ const BackEnd = () => {
                 </h2>
 
                 <p>
-                    <strong>In back-end development, my current stack involves
-                        <a href="https://spring.io/projects/spring-boot" rel="nofollow">Spring</a> &amp;
-                        <a href="http://phoenixframework.org/" rel="nofollow">Phoenix</a>,
-                        <a href="http://nodejs.org/" rel="nofollow">NodeJS</a> and
-                        <a href="https://nestjs.com/" rel="nofollow">nest.js</a></strong>, and <a
-                    href="http://rubyonrails.org/" rel="nofollow">Ruby on Rails</a>.
-                </p>
-                <p>
-                    Nearly every app I have launched in the past had the back-end done also by
-                    me. In order to improve the development speed, performance and reliability,
-                    I have changed languages and frameworks already multiple times, from PHP,
-                    Ruby to Elixir and Node.js; configured servers using just the shell, then
-                    Chef/Ansible, and now Docker and Kubernetes.
-                </p>
-                <p>
-                    The lessons I learned while doing all these apps will be useful for me
-                    forever, no matter what framework I will use in the next project.
+                    <strong>In back-end development, my current stack involves</strong>
+                    <a href="https://spring.io/projects/spring-boot" rel="nofollow">Spring</a> &amp;
                 </p>
 
                 <p>What I can do for you at that side is:</p>
 
                 <ul>
-                    <li>lead development of backends in Node.js/Elixir/Ruby,</li>
+                    <li>lead development of backends in Spring</li>
                     <li>splitting the back-end into separate domains and microservices,</li>
                     <li>
                         cooperation with APIs, remote data synchronizations, cloud servers,
@@ -110,7 +94,7 @@ const BackEnd = () => {
                         database sharding; load balancing,
                     </li>
                     <li>
-                        refactoring existing applications, by improving code readibility,
+                        refactoring existing applications, by improving code readability,
                         separating concerns into separate functions/classes/modules, taking the
                         business logic out from your request/response layer into separate modules
                         (<a href="https://en.wikipedia.org/wiki/Domain-driven_design" rel="nofollow">DDD</a>),
@@ -162,7 +146,7 @@ const DevOps = () => {
 
                 <p>
                     In cases when you already have an existing team, but you would still use
-                    some help, <a href="/contact/">contact me</a> as well.
+                    some help, <a href="/contact">contact me</a> as well.
                     I’ll fit in very quickly, I promise.
                 </p>
             </SectionContainer>
@@ -198,7 +182,7 @@ const TechnoSwiper = ({children}) => {
                     }}
                     mousewheel={true}
                     slidesPerView={"auto"}
-                    modules={[ Navigation, Pagination]}>
+                    modules={[Navigation, Pagination]}>
                     {children}
                 </Swiper>
             </div>
@@ -266,7 +250,8 @@ const ServicePage = () => {
                         <DevSvgCard name="spring" fileName="spring-plain-wordmark" fillWhite={true}/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <DevSvgCard name="express" tooltip="express js" fileName="express-original-wordmark" backgroundColor="white"/>
+                        <DevSvgCard name="express" tooltip="express js" fileName="express-original-wordmark"
+                                    backgroundColor="white"/>
                     </SwiperSlide>
                     <SwiperSlide>
                         <DevSvgCard name="mongodb" fileName="mongodb-plain-wordmark" fillWhite={true}/>
