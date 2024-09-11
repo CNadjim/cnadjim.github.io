@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import {Swiper, SwiperSlide} from "swiper/react";
-import {Mousewheel, Navigation, Pagination} from "swiper/modules";
+import {Navigation, Pagination} from "swiper/modules";
 import SquareBackgroundTech from "../../components/square-background-tech/square-background";
 import DevSvgCard from "../../components/dev-svg-card/dev-svg-card";
 
@@ -18,8 +18,7 @@ const Intro = () => {
                     <strong>A full-stack software engineer with over 8 years of experience.</strong>
                 </p>
                 <p>
-                    <strong>I have maintained, developed and launched <Link to="/portfolio">multiple
-                        projects</Link> from scratch</strong>, carrying the development of its' back-end and
+                    <strong>I have maintained, developed and launched <Link to="/portfolio">multiple projects</Link> from scratch</strong>, carrying the development of its' back-end and
                     front-end codebases.
                 </p>
 
@@ -69,32 +68,31 @@ const BackEnd = () => {
                 </h2>
 
                 <p>
-                    <strong>In back-end development, my current stack involves</strong>
-                    <a href="https://spring.io/projects/spring-boot" rel="nofollow">Spring</a> &amp;
+                    <strong>In back-end development, my current stack involves</strong> <a
+                    href="https://spring.io/projects/spring-boot" rel="nofollow">Java and Spring</a>
                 </p>
 
                 <p>What I can do for you at that side is:</p>
 
                 <ul>
-                    <li>lead development of backends in Spring</li>
-                    <li>splitting the back-end into separate domains and microservices,</li>
+                    <li>Lead development of backends in Spring</li>
+                    <li>Splitting the back-end into separate domains and microservices,</li>
                     <li>
-                        cooperation with APIs, remote data synchronizations, cloud servers,
-                        asynchronous workers,
+                        Cooperation with APIs, remote data synchronizations, cloud servers,
+                        asynchronous workers
                     </li>
                     <li>
-                        using different types of databases (like
+                        Using different types of databases (
                         <a href="http://www.postgresql.org/" rel="nofollow">PostgreSQL</a>,
                         <a href="http://www.mysql.com/" rel="nofollow">MySQL</a>,
-                        <a href="http://www.elasticsearch.org/" rel="nofollow">Elasticsearch</a>,
-                        <a href="http://redis.io/" rel="nofollow">Redis</a>)
+                        <a href="http://www.elasticsearch.org/" rel="nofollow">Elasticsearch</a>
+                        )
                     </li>
                     <li>
-                        dividing the servers into different machine nodes / docker containers;
-                        database sharding; load balancing,
+                        Dividing the servers into different machine nodes / docker containers
                     </li>
                     <li>
-                        refactoring existing applications, by improving code readability,
+                        Refactoring existing applications, by improving code readability,
                         separating concerns into separate functions/classes/modules, taking the
                         business logic out from your request/response layer into separate modules
                         (<a href="https://en.wikipedia.org/wiki/Domain-driven_design" rel="nofollow">DDD</a>),
@@ -115,40 +113,15 @@ const DevOps = () => {
                 </h2>
 
                 <p>
-                    <strong>During my time I have created and released tens of websites.</strong>
-                </p>
-
-                <p>
-                    Thus, not only I have coded their back-end and front-end codebases, but
-                    often I also had to care about other things needed in a successful web
-                    application project:
+                    I also had to care about other things needed in a successful application project:
                 </p>
 
                 <ul>
-                    <li>good planning of UI and thinking how it affects the UX;</li>
-                    <li>consistency in design and typography;</li>
-                    <li>Search Engine Optimization;</li>
-                    <li>launching, deployment and monitoring the app after the release;</li>
-                    <li>recruiting, onboarding and mentoring team members;</li>
-                    <li>
-                        in cases where a good Project Manager was missing, fullfilling his role,
-                        in order to save the project from losing time on unneeded things.
-                    </li>
+                    <li>Good planning of UI and thinking how it affects the UX</li>
+                    <li>Search Engine Optimization</li>
+                    <li>Launching, deployment and monitoring the app after the release</li>
+                    <li>Recruiting, onboarding and mentoring team members</li>
                 </ul>
-
-                <hr/>
-
-                <p>
-                    If your initial thought is that I can’t be the best in everything, it's
-                    okay. Send the design job to someone else, and I will take care of all the
-                    code development, or whatever other role you see me best in.
-                </p>
-
-                <p>
-                    In cases when you already have an existing team, but you would still use
-                    some help, <a href="/contact">contact me</a> as well.
-                    I’ll fit in very quickly, I promise.
-                </p>
             </SectionContainer>
         </>
     )

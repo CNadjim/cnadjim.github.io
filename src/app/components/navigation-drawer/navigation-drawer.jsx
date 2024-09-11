@@ -1,5 +1,5 @@
 import {useDispatch, useSelector} from "react-redux";
-import {drawerMobileClosed, selectMobileNavigationDrawer} from "../../reducers/navigation-drawer";
+import {closeMobileDrawer, selectMobileDrawerState} from "../../reducers/navigation-drawer";
 import {Dialog, Transition} from "@headlessui/react";
 import React, {Fragment} from "react";
 import {
@@ -22,40 +22,40 @@ const navigation = [
     {name: 'Home', href: '/home', icon: HomeIcon},
     {name: 'Service', href: '/service', icon: BriefcaseIcon},
     {name: 'Portfolio', href: '/portfolio', icon: FolderIcon},
-    {name: 'Curriculum vitae', href: '/cv', icon: AcademicCapIcon},
+    {name: 'Curriculum vitae', href: '/curriculum', icon: AcademicCapIcon},
     {name: 'Contact me', href: '/contact', icon: EnvelopeIcon},
 ]
-
 
 const NavigationContent = () => {
     const location = useLocation();
     const dispatch = useDispatch();
     return (
         <>
-            {navigation.map((item, key) => (
-                <Link
-                    to={item.href}
-                    key={key}
-                    onClick={() => dispatch(drawerMobileClosed())}
-                    className={classNames(item.href === location.pathname ? 'bg-gray-100 text-gray-900' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900', 'group flex items-center px-2 py-2 text-base font-medium rounded-md')}>
-                    <item.icon
-                        className={classNames(item.href === location.pathname ? 'text-gray-500' : 'text-gray-400 group-hover:text-gray-500', 'mr-4 flex-shrink-0 h-6 w-6')}
-                        aria-hidden="true"/>
-                    {item.name}
-                </Link>
-            ))}
+            {
+                navigation.map((item, key) => (
+                    <Link
+                        to={item.href}
+                        key={key}
+                        onClick={() => dispatch(closeMobileDrawer())}
+                        className={classNames(item.href === location.pathname ? 'bg-gray-100 text-gray-900' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900', 'group flex items-center px-2 py-2 text-base font-medium rounded-md')}>
+                        <item.icon
+                            className={classNames(item.href === location.pathname ? 'text-gray-500' : 'text-gray-400 group-hover:text-gray-500', 'mr-4 flex-shrink-0 h-6 w-6')}
+                            aria-hidden="true"/>
+                        {item.name}
+                    </Link>
+                ))}
         </>
     )
 }
 
 const NavigationDrawer = () => {
     const dispatch = useDispatch();
-    const isMobileDrawerOpened = useSelector(selectMobileNavigationDrawer);
+    const isMobileDrawerOpened = useSelector(selectMobileDrawerState);
     return (
         <>
 
             <Transition.Root show={isMobileDrawerOpened} as={Fragment}>
-                <Dialog as="div" className="relative z-40 lg:hidden" onClose={() => dispatch(drawerMobileClosed())}>
+                <Dialog as="div" className="relative z-40 lg:hidden" onClose={() => dispatch(closeMobileDrawer())}>
                     <Transition.Child
                         as={Fragment}
                         enter="transition-opacity ease-linear duration-300"
@@ -91,7 +91,7 @@ const NavigationDrawer = () => {
                                         <button
                                             type="button"
                                             className="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                                            onClick={() => dispatch(drawerMobileClosed())}>
+                                            onClick={() => dispatch(closeMobileDrawer())}>
                                             <span className="sr-only">Close sidebar</span>
                                             <XMarkIcon className="h-6 w-6 text-white" aria-hidden="true"/>
                                         </button>
