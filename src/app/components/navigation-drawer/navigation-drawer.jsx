@@ -98,7 +98,7 @@ const NavigationDrawer = () => {
                                     </div>
                                 </Transition.Child>
                                 <div className="h-0 flex-1 overflow-y-auto pt-5 pb-4">
-                                    <nav className="mt-5 space-y-1 px-2 space-y-4">
+                                    <nav className="mt-5 px-2 space-y-4">
                                         <NavigationContent/>
                                     </nav>
                                 </div>
@@ -114,7 +114,7 @@ const NavigationDrawer = () => {
             <div className="hidden flex-none lg:flex lg:flex-col drawer border-r border-gray-200 bg-white">
                 <div className="flex min-h-0 flex-1 flex-col">
                     <div className="flex flex-1 flex-col overflow-y-auto pt-5 pb-4">
-                        <nav className="my-auto mx-10 space-y-1 px-2 space-y-4">
+                        <nav className="my-auto mx-10 px-2 space-y-4">
                             <NavigationContent/>
                         </nav>
                     </div>

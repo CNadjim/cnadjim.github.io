@@ -1,9 +1,12 @@
-import SidebarLayout from "./layouts/sidebar/sidebarLayout";
+import SidebarLayout from "./layouts/sidebar/sidebar-layout";
+import ThemeProvider from "./providers/theme-provider/theme-provider";
 
 const App = () => {
     return (
         <>
-            <SidebarLayout/>
+            <ThemeProvider>
+                <SidebarLayout/>
+            </ThemeProvider>
         </>
     );
 }

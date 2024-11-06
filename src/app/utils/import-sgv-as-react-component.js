@@ -1,10 +1,10 @@
-import React, {useEffect, useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
 function importSgvAsReactComponent(name, fileName) {
     const ImportedIconRef = useRef();
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
+    useEffect( () => {
         const importIcon = async () => {
             try {
                 ImportedIconRef.current = (await import(`../../assets/icons/${name}/${fileName}.svg`)).ReactComponent;
@@ -14,6 +14,7 @@ function importSgvAsReactComponent(name, fileName) {
                 setLoading(false);
             }
         };
+
         importIcon();
     }, []);
 

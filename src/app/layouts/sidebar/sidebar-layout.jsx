@@ -1,7 +1,7 @@
 import Router from "../../router/router";
 import Header from "../../components/header/header";
 import NavigationDrawer from "../../components/navigation-drawer/navigation-drawer";
-import './sidebar.scss';
+import './sidebar-layout.scss';
 
 export default function SidebarLayout() {
     return (
